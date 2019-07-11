@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 .Rproj.user
+/.Rproj.user/*
 /rsconnect/*
+R-Functions.Rproj
