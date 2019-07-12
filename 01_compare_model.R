@@ -5,7 +5,7 @@ compare_models <- function(models = NULL,
                            cutoffs = c(0.1, 1)
 ){
   
-  #set up
+  #set up cutoffs
   n_cutoff = length(cutoffs)
   comparison_output = c()
   importance_file <- xgboost::xgb.importance(feature_names = models$feature_names, model = models)
