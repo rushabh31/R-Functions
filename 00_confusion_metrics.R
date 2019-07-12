@@ -31,7 +31,7 @@ conf_metrics <- function(model, actual_class, pred_risk, cutoff = 0.1) {
     FPR <- FP /(FP + TN)
     SPEC <- 1 - (FP /(FP +TN))
     PREC <- TP /(TP+FP) 
-    
+     
     1:3 %>%
       map(function(beta) ((1+beta^2)*PREC*TPR)/((beta^2*PREC+TPR))) -> F_stat
     
