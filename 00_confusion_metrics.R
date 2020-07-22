@@ -7,7 +7,7 @@ conf_metrics <- function(model, actual_class, pred_risk, cutoff = 0.1) {
   
   
   if (max(pred_risk) > cutoff) {
-    
+       
     pred_class <- ifelse(pred_risk >= cutoff, 1, 0)
     
     pred_risk %>% pROC::roc(actual_class, .) %>% pROC::auc(.) -> auc_test
